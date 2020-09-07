@@ -1,0 +1,19 @@
+name: Tabify
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Repo checkout
+      uses: actions/checkout@v2
+    - name: Tabify
+      uses: ayan-b/tabifier-action@master
+    - name: Commit and push
+      run: |
+        git add .
+        git commit -m "Tabify"
+        git push https://ayan-b:${GITHUB_TOKEN}@github.com/ayan-b/tabify-playground HEAD:master

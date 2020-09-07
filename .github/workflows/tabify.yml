@@ -23,4 +23,4 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git commit -m "Tabify"
-        git push https://ayan-b:${GITHUB_TOKEN}@github.com/ayan-b/tabify-playground HEAD:master
+        git push https://ayan-b:${GITHUB_TOKEN}@github.com/ayan-b/tabifier-playground HEAD:master

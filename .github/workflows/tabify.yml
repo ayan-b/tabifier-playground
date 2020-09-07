@@ -12,6 +12,8 @@ jobs:
       uses: actions/checkout@v2
     - name: Tabify
       uses: ayan-b/tabifier-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Commit and push
       run: |
         git add .
